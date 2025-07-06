@@ -1,0 +1,20 @@
+{
+  "drift_detection": {
+    "statistical_threshold": 0.05,
+    "performance_threshold_percentage": 10.0,
+    "monitoring_frequency_hours": 24
+  },
+  "performance_tracking": {
+    "batch_size": 1000,
+    "retention_days": 90,
+    "alert_thresholds": {
+      "rmse_increase_percentage": 15.0,
+      "r2_decrease_threshold": 0.05
+    }
+  },
+  "logging": {
+    "log_level": "INFO",
+    "cloudwatch_log_group": "solar-power-ml-pipeline",
+    "retention_days": 30
+  }
+}

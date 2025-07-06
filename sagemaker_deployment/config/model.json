@@ -1,0 +1,12 @@
+{
+  "ModelName": "solar-power-generation-model",
+  "PrimaryContainer": {
+    "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-scikit-learn:0.23-1-cpu-py3",
+    "ModelDataUrl": "s3://your-bucket/solar-models/model.tar.gz",
+    "Environment": {
+      "SAGEMAKER_PROGRAM": "inference.py",
+      "SAGEMAKER_SUBMIT_DIRECTORY": "/opt/ml/code"
+    }
+  },
+  "ExecutionRoleArn": "arn:aws:iam::YOUR_ACCOUNT:role/SageMakerExecutionRole"
+}

@@ -1,0 +1,51 @@
+{
+  "TrainingJobName": "solar-power-generation-training",
+  "AlgorithmSpecification": {
+    "TrainingImage": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-scikit-learn:0.23-1-cpu-py3",
+    "TrainingInputMode": "File"
+  },
+  "RoleArn": "arn:aws:iam::YOUR_ACCOUNT:role/SageMakerExecutionRole",
+  "InputDataConfig": [
+    {
+      "ChannelName": "train",
+      "DataSource": {
+        "S3DataSource": {
+          "S3DataType": "S3Prefix",
+          "S3Uri": "s3://your-bucket/solar-data/train/",
+          "S3DataDistributionType": "FullyReplicated"
+        }
+      },
+      "ContentType": "text/csv",
+      "CompressionType": "None"
+    },
+    {
+      "ChannelName": "validation",
+      "DataSource": {
+        "S3DataSource": {
+          "S3DataType": "S3Prefix",
+          "S3Uri": "s3://your-bucket/solar-data/validation/",
+          "S3DataDistributionType": "FullyReplicated"
+        }
+      },
+      "ContentType": "text/csv",
+      "CompressionType": "None"
+    }
+  ],
+  "OutputDataConfig": {
+    "S3OutputPath": "s3://your-bucket/solar-models/"
+  },
+  "ResourceConfig": {
+    "InstanceType": "ml.m5.large",
+    "InstanceCount": 1,
+    "VolumeSizeInGB": 30
+  },
+  "StoppingCondition": {
+    "MaxRuntimeInSeconds": 3600
+  },
+  "HyperParameters": {
+    "model-type": "neural_network",
+    "n-estimators": "100",
+    "hidden-layers": "100,50,25",
+    "alpha": "0.001"
+  }
+}

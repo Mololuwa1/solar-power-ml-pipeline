@@ -1,0 +1,23 @@
+{
+  "model_type": "neural_network",
+  "hyperparameters": {
+    "hidden_layers": [
+      100,
+      50,
+      25
+    ],
+    "alpha": 0.001,
+    "max_iter": 300,
+    "random_state": 42
+  },
+  "performance_thresholds": {
+    "min_r2_score": 0.95,
+    "max_rmse": 0.5,
+    "max_mae": 0.2
+  },
+  "training_config": {
+    "test_size": 0.2,
+    "validation_size": 0.2,
+    "cross_validation_folds": 5
+  }
+}

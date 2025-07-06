@@ -1,0 +1,16 @@
+{
+  "region": "us-east-1",
+  "sagemaker": {
+    "role_arn": "arn:aws:iam::YOUR_ACCOUNT:role/SageMakerExecutionRole",
+    "instance_type": "ml.m5.large",
+    "endpoint_instance_type": "ml.t2.medium"
+  },
+  "s3": {
+    "data_bucket": "your-solar-data-bucket",
+    "model_bucket": "your-model-artifacts-bucket",
+    "monitoring_bucket": "your-monitoring-bucket"
+  },
+  "sns": {
+    "alert_topic": "arn:aws:sns:us-east-1:YOUR_ACCOUNT:solar-alerts"
+  }
+}
