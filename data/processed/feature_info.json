@@ -1,0 +1,59 @@
+{
+  "feature_columns": [
+    "year",
+    "month",
+    "day",
+    "hour",
+    "minute",
+    "day_of_week",
+    "day_of_year",
+    "hour_sin",
+    "hour_cos",
+    "month_sin",
+    "month_cos",
+    "day_of_week_sin",
+    "day_of_week_cos",
+    "solar_elevation",
+    "is_daytime",
+    "is_peak_sun",
+    "is_weekend",
+    "Irradiance_mean",
+    "Irradiance_max",
+    "Irradiance_min",
+    "Irradiance_std",
+    "Temperature_mean",
+    "Temperature_max",
+    "Temperature_min",
+    "Temperature_std",
+    "generation(kWh)_lag_1",
+    "generation(kWh)_lag_2",
+    "generation(kWh)_lag_4",
+    "generation(kWh)_lag_24",
+    "generation(kWh)_rolling_mean_4",
+    "generation(kWh)_rolling_std_4",
+    "generation(kWh)_rolling_mean_12",
+    "generation(kWh)_rolling_std_12",
+    "generation(kWh)_rolling_mean_24",
+    "generation(kWh)_rolling_std_24",
+    "Irradiance_mean_lag_1",
+    "Irradiance_mean_lag_2"
+  ],
+  "target_column": "generation(kWh)",
+  "metadata_columns": [
+    "Time",
+    "station"
+  ],
+  "total_features": 37,
+  "total_samples": 79044,
+  "stations": [
+    "SQ18",
+    "SQ567FlexiblePV",
+    "SQBlockQ(Phrase2)",
+    "UGHall4FlexiblePV",
+    "UGHall7FlexiblePV"
+  ],
+  "date_range": [
+    "2021-09-21 01:00:00",
+    "2023-12-31 23:00:00"
+  ]
+}
